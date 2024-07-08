@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate Personalised Ad</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #loading {
+        display: none;
+      }
+
+      #loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
+
+.loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+    </style>
+  </head>
+  <body
+    style="
+      background: radial-gradient(
+        circle at 10% 20%,
+        rgb(126, 70, 195) 0%,
+        rgb(156, 236, 247) 90%
+      );
+      background-repeat: no-repeat;
+      background-size: 110% 110%;
+    "
+  >
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT8
+            7bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <div
+      class="container"
+      style="
+        align-content: center;
+        margin-top: 3%;
+        width: 32%;
+        margin-bottom: 8%;
+        border-radius: 2%;
+        background-color: white;
+        padding: 2%;
+      "
+    >
+      <form action="/single-customer" method="POST">
+        <div class="mb-3" style="padding: 2%">
+          <label for="customerName" class="form-label"
+            >Enter Customer's Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="customerName"
+            name="customerName"
+            placeholder="John Smith"
+            required
+          />
+        </div>
+        <div class="mb-3" style="padding: 2%">
+          <label for="customerInterests" class="form-label"
+            >Customer Interests:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="customerInterests"
+            name="customerInterests"
+            required
+            placeholder="Cricket, Coding, etc."
+          />
+        </div>
+<!--        <div class="mb-3" style="padding: 2%">-->
+<!--          <label for="custMobile" class="form-label"-->
+<!--            >Customer Mobile:</label-->
+<!--          >-->
+<!--          <input-->
+<!--            type="text"-->
+<!--            class="form-control"-->
+<!--            id="custMobile"-->
+<!--            name="custMobile"-->
+<!--            required-->
+<!--            placeholder="Mobile with Country Code"-->
+<!--          />-->
+<!--        </div>-->
+        <div class="mb-3" style="padding: 2%">
+          <label for="productName" class="form-label"
+            >Enter your Product Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            name="productName"
+            required
+            placeholder="T-Shirt"
+          />
+        </div>
+        <div class="mb-3" style="padding: 2%">
+          <label for="productDetails" class="form-label"
+            >Enter your Product's Details:</label
+          >
+          <textarea
+            type="text"
+            class="form-control"
+            id="productDetails"
+            name="productDetails"
+            rows="4"
+            required
+            placeholder="Color : Blue, Size : XL"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          value="Submit"
+          style="
+            color: white;
+            align-items: center;
+            margin-left: 20%;
+            border-radius: 5px;
+            width: 60%;
+            height: 1cm;
+            background-color: rgb(126, 70, 195);
+            border-color: white;
+            border-style: hidden;
+          "
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+  </body>
+</html>

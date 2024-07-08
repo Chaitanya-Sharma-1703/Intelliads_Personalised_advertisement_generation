@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>IntelliAds</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/static/Images/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="{{ url_for('static', filename='stylesheets/styles.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: #b9f2ff">
+    <main class="flex-shrink-0">
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+          <a class="navbar-brand" href="landing_page.html"
+            ><span class="fw-bolder text-primary">IntelliAds</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+              <li class="nav-item"><a class="nav-link">Home</a></li>
+              <li class="nav-item"><a class="nav-link">About Us</a></li>
+              <li class="nav-item"><a class="nav-link">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Header-->
+      <header class="py-5">
+        <div class="container px-5 pb-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-xxl-5">
+              <!-- Header text content-->
+              <div class="text-center text-xxl-start">
+                <br /><br />
+                <div class="fs-3 fw-light text-muted">
+                  Grow your business with AI Powered Personalised Ads
+                </div>
+                <h1 class="display-3 fw-bolder mb-5">
+                  <span class="text-gradient d-inline"
+                    >New Generation Advertisements</span
+                  >
+                </h1>
+                <div
+                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
+                >
+                  <a
+                    class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
+                    onclick="redirectToPage1()"
+                    >Text-Based Ads</a
+                  >
+                  <a
+                    class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
+                    onclick="redirectToPage2()"
+                    >Bulk Ads</a
+                  >
+                  <a
+                    class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
+                    onclick="redirectToPage3()"
+                    >Image-Based Ads</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- About Section-->
+      <section
+        class="bg-light py-5"
+        style="
+          width: 80%;
+          align-content: center;
+          margin-left: 10%;
+          border-radius: 30px;
+          border-color: black;
+          margin-bottom: 40px;
+        "
+      >
+        <div class="container px-5" >
+          <div class="row gx-5 justify-content-center">
+            <div class="col-xxl-8">
+              <div class="text-center my-5">
+                <h2 class="display-5 fw-bolder">
+                  <span class="text-gradient d-inline">About Us</span>
+                </h2>
+                <p class="lead fw-light mb-4">
+                  IntelliAds helps businesses to leverage the power of AI to
+                  grow their businesses.
+                </p>
+                <p class="text-muted">
+                  IntelliAds is an innovative advertising solution that
+                  leverages the power of Generative AI to create personalized
+                  and emotionally resonant advertisements. In a world inundated
+                  with generic ad content, we recognize the need to establish
+                  genuine connections between brands and consumers. Our solution
+                  addresses this challenge by crafting tailored ad campaigns
+                  that speak directly to individual preferences and emotions.
+                </p>
+                <div class="d-flex justify-content-center fs-2 gap-4">
+                  <a class="text-gradient" href="#!"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                  <a class="text-gradient" href="#!"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a class="text-gradient" href="#!"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><br><br>
+    </main>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+
+  <script>
+    function redirectToPage1() {
+      window.location.href = "/single-customer";
+    }
+
+    function redirectToPage2() {
+      window.location.href = "/multi-customer";
+    }
+
+    function redirectToPage3() {
+      window.location.href = "/image-based";
+    }
+  </script>
+</html>

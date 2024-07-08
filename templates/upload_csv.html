@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulk Advertisements</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(126, 70, 195) 0%,
+          rgb(156, 236, 247) 90%
+        );
+        background-repeat: no-repeat;
+        background-size: 110% 110%;
+      }
+
+      #card {
+        padding: 30px;
+        width: 700px;
+        text-align: center;
+        background-color: white;
+        border-radius: 5%;
+      }
+
+      #card hr {
+        margin: 10px 0;
+      }
+
+      #buttons-container {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .button {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(126, 70, 195);
+        color: white;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card">
+      <h3>Upload Data</h3>
+      <hr />
+      <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="mb-3" style="padding: 2%">
+          <label for="productName" class="form-label"
+            >Enter your Product Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            name="productName"
+            required
+            placeholder="T-Shirt"
+          />
+        </div>
+
+      <div class="mb-3" style="padding: 2%">
+          <label for="productDetails" class="form-label"
+            >Enter your Product's Details:</label
+          >
+          <textarea
+            type="text"
+            class="form-control"
+            id="productDetails"
+            name="productDetails"
+            rows="2"
+            required
+            placeholder="Color : Blue, Size : XL"
+          ></textarea>
+        </div>
+
+
+        <div class="input-group mb-3" style="align-items: center">
+          <div class="custom-file">
+            <input
+              type="file"
+              class="custom-file-input"
+              id="file"
+              name="file"
+              accept=".csv"
+              required
+            />
+          </div>
+        </div>
+
+
+        <div id="buttons-container">
+          <button class="button" type="submit" value="Upload">
+            Upload Data
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
