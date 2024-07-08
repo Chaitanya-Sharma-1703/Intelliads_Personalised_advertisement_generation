@@ -1,0 +1,4 @@
+flask~=3.0.3
+pandas~=2.2.2
+pywhatkit~=5.4
+openai~=1.20.0
